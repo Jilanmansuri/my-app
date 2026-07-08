@@ -7,6 +7,7 @@ const setting = () => {
         console.log("pressed")
         Alert.alert("Success", "Button Pressed")
     }
+    
     return (
         <View style={styles.container}>
 
