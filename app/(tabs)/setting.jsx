@@ -1,54 +1,34 @@
-import React from "react";
-import { View, Text, Button, Alert, StyleSheet, Pressable } from "react-native";
+import React from 'react'
+import {View, Text,Button,Alert,Pressable,TextInput} from "react-native"
+import { StyleSheet } from 'react-native';
+const Setting = () => {
 
-const setting = () => {
-
-    const handlePress = () => {
-        console.log("pressed")
-        Alert.alert("Success", "Button Pressed")
-    }
-    
-    return (
-        <View style={styles.container}>
-
-            <Pressable
-                onPress={handlePress}
-                style={({ pressed }) => [
-                    styles.button,
-                    { opacity: pressed ? 0.5 : 1 }
-                ]}
-            >
-                <Text style={styles.buttonText}>Button</Text>
-            </Pressable>
-
-            <Button title='Click Me' onPress={() => alert("Clicked")} />
-
-            <Button title="Login" onPress={handlePress} />
-
-        </View>
-    )
+  const[name,setName]=React.useState("")
+  return (
+    <View style={styles.container}>
+       <Text>write something </Text>
+       <TextInput placeholder="Enter text here..." value={name} onChangeText={setName} />
+       <Text>Name: {name}</Text>
+    </View>
+  )
 }
 
 
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "red",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 20
-    },
-    button: {
-        backgroundColor: "black",
-        paddingVertical: 8,
-        paddingHorizontal: 13
-
-    },
-    buttonText: {
-        backgroundColor: "blue",
-        color: "white"
-    }
-})
-
-export default setting
+  container: {
+    flex: 1,
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    paddingVertical: 15
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold'
+  }
+});
+export default Setting
