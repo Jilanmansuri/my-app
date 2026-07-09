@@ -31,18 +31,11 @@ export default function TabLayout() {
         }}
       />
 
-      <Tabs.Screen
-        name="home123"
-        options={{
-          title: 'home123',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
 
       <Tabs.Screen
         name="product"
         options={{
-          title: 'product',
+          title: 'Product',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
@@ -50,7 +43,15 @@ export default function TabLayout() {
       <Tabs.Screen
         name="setting"
         options={{
-          title: 'setting',
+          title: 'Setting',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="flatlist"
+        options={{
+          title: 'FlatList',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
